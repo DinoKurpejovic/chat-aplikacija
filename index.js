@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded());
 
 app.get('/', (req, res) =>{
-    res.send('Hello, World!');
+    res.send('https://calm-sea-96817.herokuapp.com');
 });
 
 app.post('/', (req, res) =>{
