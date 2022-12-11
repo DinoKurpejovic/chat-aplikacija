@@ -16,7 +16,7 @@ const UnMemoizedEmptyStateIndicator = (props: EmptyStateIndicatorProps) => {
   if (listType === 'thread') return null;
 
   if (listType === 'channel') {
-    const text = t<string>('You have no channels currently');
+    const text = t<string>('Nemate trenutno grupe');
     return (
       <>
         <div className='str-chat__channel-list-empty'>

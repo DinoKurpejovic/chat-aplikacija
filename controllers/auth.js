@@ -1,8 +1,12 @@
+//Povezivanje sa API-jem
 const { connect } = require('getstream');
+//BCRYPT je biblioteka NodeJS-a za prikrivanje (hash) i slanje lozinki.
 const bcrypt = require('bcrypt');
+//StreamChat - API
 const StreamChat = require ('stream-chat').StreamChat;
+//CRYPTO - biblioteka za šifrovanje i dešifrovanje podataka.
 const crypto = require('crypto');
-
+//Uzimanje podataka iz .env fajla
 require('dotenv').config();
 
 //Uzima iz .env fajla
@@ -10,6 +14,8 @@ const api_key = process.env.STREAM_API_KEY;
 const api_secret = process.env.STREAM_API_SECRET;
 const app_id = process.env.STREAM_APP_ID;
 
+
+//Registracija
 const signup = async (req, res) => {
     try {
         const { fullName, username, password, phoneNumber } = req.body;
@@ -32,7 +38,7 @@ const signup = async (req, res) => {
     }
 }
 
-
+//Prijava
 const login = async (req, res) => {
     try {
         const {username, password} = req.body;
