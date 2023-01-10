@@ -42,7 +42,6 @@ const signup = async (req, res) => {
 const login = async (req, res) => {
     try {
         const {username, password} = req.body;
-        ;
         const serverClient = connect(api_key, api_secret, app_id);
         const client = StreamChat.getInstance(api_key, api_secret);
 
