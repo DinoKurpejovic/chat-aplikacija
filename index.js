@@ -12,7 +12,7 @@ require('dotenv').config();
 app.use(cors());
 app.use(express.json());
 //Funkcija express okvira za analizu http zahtjeva
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }))
 
 
 app.get('/', (req, res) => {
