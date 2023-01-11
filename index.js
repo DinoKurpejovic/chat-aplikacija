@@ -1,6 +1,8 @@
 //EXPRESS - Okvir za manipulaciju rutama i serverima
 const express = require('express');
 const cors = require('cors');
+const serverless = require("serverless-http");
+
 
 const authRoutes = require("./routes/auth.js");
 
