@@ -19,5 +19,5 @@ app.get('/', (req, res) => {
     res.send('Hello, World!');
 });
 
-app.use(`/.netlify/functions/api`, authRoutes);
 app.use('/auth', authRoutes);
+
