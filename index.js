@@ -21,6 +21,3 @@ app.get('/', (req, res) => {
 
 app.use(`/.netlify/functions/api`, authRoutes);
 app.use('/auth', authRoutes);
-
-module.exports = app;
-module.exports.handler = serverless(app);
